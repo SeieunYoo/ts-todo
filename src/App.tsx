@@ -1,6 +1,7 @@
 import { useDispatch } from 'react-redux';
 import useInput from './hooks/useInput';
 import { dispatchAddToDo } from './redux/store';
+import List from './components/List';
 
 function App() {
   const { text, onChange, setText } = useInput();
@@ -25,6 +26,9 @@ function App() {
         />
         <button>+</button>
       </form>
+      <List isToDo={true} />
+      <h1>Done</h1>
+      <List isToDo={false}/>
     </>
   );
 }
